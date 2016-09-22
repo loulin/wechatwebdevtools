@@ -110,9 +110,9 @@ function init() {
             return n.error("projectStores.js end get projectAttr parse body error: " + c + " " + JSON.stringify(i)), void(!o && alert("系统错误 " + c))
           }
           var u = a.baseresponse,
-            j = u ? parseInt(u.errcode) : 0;
+            j = 0; //u ? parseInt(u.errcode) : 0;
           if (0 === j) {
-            var l = a.attr_list[0];
+            var l = {}; // a.attr_list[0];
             d[e.hash] = l, localStorage.setItem(r, JSON.stringify(l)), o || t()
           } else {
             if (j === f.DEV_App_Not_Band) {

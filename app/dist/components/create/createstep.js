@@ -92,11 +92,11 @@ function init() {
             var h = JSON.parse(u),
               f = h.baseresponse,
               v = f ? parseInt(f.errcode) : 0;
-            if (v === n.DEV_App_Not_Band) return e("当前开发者未绑定此 appid ，请到 mp 后台操作后重试"), nw.Shell.openExternal("https://mp.weixin.qq.com/"), void c.error("createstep.js create project error " + v);
-            if (0 === v) {
-              var b = h.app_head_img ? h.app_head_img + "/0" : "",
-                g = t.state.showQuickStart && t.state.checked;
-              return d = {
+            // if (v === n.DEV_App_Not_Band) return e("当前开发者未绑定此 appid ，请到 mp 后台操作后重试"), nw.Shell.openExternal("https://mp.weixin.qq.com/"), void c.error("createstep.js create project error " + v);
+            // if (0 === v) {
+            var b = h.app_head_img ? h.app_head_img + "/0" : "",
+              g = t.state.showQuickStart && t.state.checked;
+            return d = {
                 appid: o,
                 appname: l,
                 projectpath: a,
@@ -111,9 +111,9 @@ function init() {
                 saveBtnDisable: !0,
                 showLoading: !1
               }), void t.props.goMain(d)
-            }
-            var E = u || "系统错误";
-            e(E)
+              // }
+              // var E = u || "系统错误";
+              // e(E)
           }
         }))
       },
